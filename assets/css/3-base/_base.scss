@@ -1,0 +1,264 @@
+/* Base Styles -------------------- */
+
+html {
+  font-size: 10px;
+}
+body {
+  color: $text-dark;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-family: 'ProximaNova', sans-serif;
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 9rem 0;
+  @include media-breakpoint-down(xs) {
+    padding: 4rem 0;
+  }
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    height: 0;
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+}
+
+a {
+    color: $text-dark;
+    transition: color 0.3s;
+}
+
+a.active {
+    color: $blue;
+}
+
+a:hover {
+    color: $blue;
+    text-decoration: none;
+}
+
+.bg-light-blue {
+  background-color: $light-blue;
+}
+.bg-dark-blue {
+  background-color: #101624;
+}
+
+/* HEADINGS */
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: bold;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  @include media-breakpoint-down(xs) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fs-20 {
+  font-size: 2rem;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.4rem;
+  }
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.clr-blue {
+  color: $blue;
+}
+
+/* BUTTONS */
+
+.btn {
+  color: #fff;
+  border-radius: 0;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 1.1rem 1.6rem;
+}
+
+.btn-blue {
+  color: #fff;
+  border-color: $blue;
+  background-color: $blue;
+}
+
+.btn-blue:hover {
+  color: #fff;
+  box-shadow: 0 3px 30px 0 rgba(0, 170, 250, 0.5);
+}
+
+.btn-transparent {
+    color: #fff;
+    border-color: $blue;
+    background-color: transparent;
+}
+
+.btn-transparent:hover {
+    color: #fff;
+    background-color: $blue;
+}
+
+.border-200 {
+  border-radius: 200px;
+}
+
+/* INPUTS */
+
+input, textarea {
+  border: 0;
+  width: 100%;
+  display: block;
+  font-size: 1.2rem;
+  position: relative;
+  padding: .6rem 1rem;
+
+  &.no-valid {
+    border: 1px solid red;
+  }
+}
+input:focus {
+   outline: none;
+}
+
+label {
+  font-size: 12px;
+}
+
+//Slick Arrow
+.slick-slide {
+  outline: none;
+}
+
+.slick-arrow, .slider-position {
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  position: absolute;
+}
+.prev-arrow {
+  left: 0;
+}
+.next-arrow {
+  left: 10rem;
+}
+
+.slide-arrows {
+  top: -4rem;
+  left: 0;
+  position: absolute;
+
+  &>div {
+    width: 10rem;
+    text-align: center;
+  }
+
+ .slider-arrow-prev, .slider-arrow-next {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($path-image + '/tail-left.svg');
+ }
+ .slider-arrow-next {
+  background-image: url($path-image + '/tail-right.svg');
+ }
+}
+
+//Helvetica - Regular (400)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+//Helvetica - Normal Italic (400)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-RegularIt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+//Helvetica - Light (300)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+//Helvetica - Light Italic (300)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/Helvetica-LightOblique.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+//Helvetica - SemiBold (500)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+//Helvetica - Bold (700)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+//Helvetica - Bold (900)
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($path-fonts + '/ProximaNova/ProximaNova-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url($path-fonts + '/icons/icomoon.eot?m3t9ly');
+  src:  url($path-fonts + '/icons/icomoon.eot?m3t9ly#iefix') format('embedded-opentype'),
+    url($path-fonts + '/icons/icomoon.ttf?m3t9ly') format('truetype'),
+    url($path-fonts + '/icons/icomoon.woff?m3t9ly') format('woff'),
+    url($path-fonts + '/icons/icomoon.svg?m3t9ly#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "../../fonts/icons/icomoon";
